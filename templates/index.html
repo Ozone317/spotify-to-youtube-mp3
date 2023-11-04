@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your liked songs</title>
+</head>
+<body>
+    <ul>
+        {% for song in data['songs'] %}
+            <li><a href="{{ url_for('download', song=song) }}">{{song}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
